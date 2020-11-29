@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './Statics/Header';
+import Footer from './Statics/Footer';
+import HomeSlider from './Components/Home/HomeSlider';
+import BlogSection from './Components/Home/BlogSection';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <body className="MainApp">
+      <div className="HomeHeader">
+        <Header />
+        <HomeSlider />
+      </div>
+      <p>Some Content</p>
+      <BlogSection />
+      <Footer />
+    </body>
   </React.StrictMode>,
   document.getElementById('root')
 );

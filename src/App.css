@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+.MainApp{
+  max-width: 1280px;
+  margin: auto;
+  border: 1px;
+  box-shadow:
+    /* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 10px 1px -4px rgba(0,0,0,0.15),
+     /* The third layer */
+    0 20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 20px 1px -9px rgba(0,0,0,0.15);
+    /* Padding for demo purposes */
+    background: linear-gradient(90deg, rgba(18,223,241,1) 0%, rgba(13,171,123,1) 49%, rgba(0,255,181,1) 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Design */
+
+.HeaderArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.HeaderArea .LogoArea{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.HeaderArea .MenuArea{
+  width: 55%;
+}
+
+.HeaderArea .MenuArea ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-weight: bold;
+}
+
+.HeaderArea .PromoArea{
+  border: 1px solid green;
+  padding: 5px 35px;
+  border-radius: 10px;
+  background: white;
+  color: green;
+  transition: all linear 0.1s;
+  cursor: pointer;
+}
+
+.HeaderArea .PromoArea:hover{
+  background:green;
   color: white;
+  transition: all linear 0.1s;
 }
 
-.App-link {
-  color: #61dafb;
+.HomeHeader{
+  background-image: url(./Assets/Images/banner-back.jpg);
+  padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.HomeSlider{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 10px
 }
+.Slide-ImageHolder{
+  min-width: 50%;
+}
+.Slide-ImageHolder img{
+  max-height: 500px;
+}
+.Slide-TextHolder{
+  text-align: justify ;
+  padding-right: 10px;
+  line-height: 25px;
+  font-weight: 500;
+}
+.Slide-TextHolder div div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.Slide-TextHolder button{
+  padding: 10px;
+  border-radius: 5px;
+  background: transparent;
+  border: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+      
+}
+.Slide-TextHolder button:hover:before{
+  transform: translate(0%);
+  transition: all linear 0.5s;
+}
+.Slide-TextHolder button:nth-child(1){
+  border: 1px solid pink;
+}
+.Slide-TextHolder button:nth-child(2){
+  border: 1px solid blue;
+}
+.Slide-TextHolder button:nth-child(1):before{
+  content: "";
+  width: 400%;
+  height: 200%;
+  background: linear-gradient(90deg, rgba(241,18,18,1) 0%, rgba(171,13,60,1) 49%, rgba(255,0,187,1) 100%);;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%);
+  z-index: -1;
+  transition: all linear 0.5s;
+}
+.Slide-TextHolder button:nth-child(2):before{
+  content: "";
+  width: 400%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%);
+  z-index: -1;
+  transition: all linear 0.5s;
+}
+
+.Slide-TextHolder button:hover:before{
+  transform: translate(0%);
+  transition: all linear 0.5s;
+}
+
